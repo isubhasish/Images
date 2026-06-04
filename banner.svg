@@ -101,12 +101,12 @@
 
   <text x="800" y="135" text-anchor="middle" class="subtitle">Advanced Telegram Video Compressor</text>
 
-  <g transform="translate(800, 395)" text-anchor="middle">
-    <rect x="-175" y="-15" width="150" height="30" rx="5" fill="#1d3557" stroke="#336699"/>
+<g transform="translate(800, 395)" text-anchor="middle">
+    <rect x="-175" y="-15" width="150" height="30" rx="5" fill="#78b159" stroke="#5e8b46"/>
     <circle cx="-160" cy="0" r="3.5" class="capsule-dot" fill="#ffffff" />
     <text x="-93" y="5" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">LATEST DOCKER</text>
 
-    <rect x="27" y="-15" width="150" height="30" rx="5" fill="#1d3557" stroke="#336699"/>
+    <rect x="27" y="-15" width="150" height="30" rx="5" fill="#78b159" stroke="#5e8b46"/>
     <circle cx="40" cy="0" r="3.5" class="capsule-dot" fill="#ffffff" />
     <text x="108" y="5" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">100% DMCA SAFE</text>
   </g>
