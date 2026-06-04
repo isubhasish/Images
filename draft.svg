@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500">
+
+  <defs>
+
+    <!-- Light Theme -->
+    <linearGradient id="titleLight" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <!-- Dark Theme -->
+    <linearGradient id="titleDark" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <style>
+
+    .title{
+      font-family: Inter,Segoe UI,sans-serif;
+      font-size:72px;
+      font-weight:900;
+      fill:url(#titleLight);
+      letter-spacing:2px;
+    }
+
+    .subtitle{
+      font-family: Inter,Segoe UI,sans-serif;
+      font-size:28px;
+      fill:#475569;
+      letter-spacing:4px;
+    }
+
+    .tagline{
+      font-family: Inter,Segoe UI,sans-serif;
+      font-size:24px;
+      fill:#64748b;
+      font-style:italic;
+    }
+
+    .laurel{
+      fill:none;
+      stroke:#64748b;
+      stroke-width:3;
+    }
+
+    .badge{
+      font-family: Inter,Segoe UI,sans-serif;
+      font-size:20px;
+      font-weight:700;
+      fill:#334155;
+    }
+
+    .videoFrame{
+      fill:none;
+      stroke:#64748b;
+      stroke-width:1.5;
+    }
+
+    .plane{
+      fill:#60a5fa;
+      opacity:.85;
+    }
+
+    .cloud{
+      fill:url(#cloudGrad);
+      opacity:.15;
+      stroke:url(#cloudGrad);
+      stroke-width:2;
+    }
+
+    @media (prefers-color-scheme: dark){
+
+      .title{
+        fill:url(#titleDark);
+      }
+
+      .subtitle{
+        fill:#cbd5e1;
+      }
+
+      .tagline{
+        fill:#94a3b8;
+      }
+
+      .badge{
+        fill:#e2e8f0;
+      }
+
+      .laurel{
+        stroke:#94a3b8;
+      }
+
+      .videoFrame{
+        stroke:#38bdf8;
+      }
+    }
+
+  </style>
+
+  <!-- HAND ARM MADE OF VIDEO FRAMES -->
+
+  <g opacity=".7">
+
+    <rect x="70" y="290" width="70" height="40" class="videoFrame"/>
+    <rect x="140" y="280" width="70" height="40" class="videoFrame"/>
+    <rect x="210" y="270" width="70" height="40" class="videoFrame"/>
+    <rect x="280" y="260" width="70" height="40" class="videoFrame"/>
+    <rect x="350" y="250" width="70" height="40" class="videoFrame"/>
+    <rect x="420" y="240" width="70" height="40" class="videoFrame"/>
+
+    <rect x="120" y="330" width="70" height="40" class="videoFrame"/>
+    <rect x="190" y="320" width="70" height="40" class="videoFrame"/>
+    <rect x="260" y="310" width="70" height="40" class="videoFrame"/>
+    <rect x="330" y="300" width="70" height="40" class="videoFrame"/>
+    <rect x="400" y="290" width="70" height="40" class="videoFrame"/>
+
+  </g>
+
+  <!-- ILLUSTRATED HAND -->
+
+  <path
+    d="
+    M460 250
+    C520 210 590 190 670 200
+    C720 205 760 220 790 240
+    C820 260 840 290 825 320
+    C810 350 770 355 720 350
+    C650 345 590 335 520 320
+    C470 310 430 295 420 275
+    C415 265 425 255 460 250
+    "
+    fill="none"
+    stroke="#64748b"
+    stroke-width="4"
+  />
+
+  <!-- CLOUD -->
+
+  <path
+    class="cloud"
+    filter="url(#glow)"
+    d="
+    M760 220
+    C760 180 810 165 850 180
+    C880 140 960 140 990 190
+    C1040 180 1080 210 1080 255
+    C1130 260 1150 300 1120 330
+    L820 330
+    C780 320 750 290 760 220
+    Z
+    "
+  />
+
+  <!-- MEDIA BLOCKS INSIDE CLOUD -->
+
+  <g opacity=".85">
+
+    <rect x="830" y="220" width="55" height="35" rx="5" fill="#3b82f6"/>
+    <rect x="900" y="245" width="70" height="40" rx="5" fill="#6366f1"/>
+    <rect x="980" y="215" width="50" height="30" rx="5" fill="#8b5cf6"/>
+    <rect x="1020" y="260" width="45" height="28" rx="5" fill="#3b82f6"/>
+
+    <text x="845" y="243" fill="white" font-size="12">MP4</text>
+    <text x="917" y="270" fill="white" font-size="12">MKV</text>
+    <text x="992" y="235" fill="white" font-size="12">H265</text>
+
+  </g>
+
+  <!-- TELEGRAM PLANES -->
+
+  <polygon class="plane"
+    points="1180,180 1220,195 1190,210"/>
+
+  <polygon class="plane"
+    points="1240,210 1275,225 1248,240"/>
+
+  <polygon class="plane"
+    points="1210,260 1250,275 1220,290"/>
+
+  <polygon class="plane"
+    points="1280,170 1315,185 1288,200"/>
+
+  <!-- TITLE -->
+
+  <text x="800" y="90"
+        text-anchor="middle"
+        class="title">
+        SUBHASISH ENCODER
+  </text>
+
+  <!-- SUBTITLE -->
+
+  <text x="800" y="135"
+        text-anchor="middle"
+        class="subtitle">
+        ADVANCED TELEGRAM VIDEO COMPRESSOR
+  </text>
+
+  <!-- TAGLINE -->
+
+  <text x="800" y="175"
+        text-anchor="middle"
+        class="tagline">
+        Compress More. Upload Faster.
+  </text>
+
+  <!-- LAURELS -->
+
+  <path class="laurel"
+        d="M430 430 C390 390 390 350 430 320"/>
+
+  <path class="laurel"
+        d="M1170 430 C1210 390 1210 350 1170 320"/>
+
+  <text x="800"
+        y="390"
+        text-anchor="middle"
+        class="badge">
+        CONTENT SAFE PIPELINE • ALWAYS UPDATED DOCKER
+  </text>
+
+</svg>

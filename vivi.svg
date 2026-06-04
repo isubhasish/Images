@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 300" width="100%" height="100%">
+  <defs>
+    <!-- Modern Icon Gradient (Blue to Purple) -->
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    
+    <!-- Light Mode Text Gradient -->
+    <linearGradient id="textGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e40af" />
+      <stop offset="100%" stop-color="#6b21a8" />
+    </linearGradient>
+    
+    <!-- Dark Mode Text Gradient -->
+    <linearGradient id="textGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#d8b4fe" />
+    </linearGradient>
+
+    <!-- Invisible Path for the U-Shape Text (Bottom Curve) - Radius 37 for perfect center -->
+    <path id="textPathU" d="M 13,50 A 37,37 0 0,0 87,50" />
+    
+    <!-- Invisible Path for the Arch Text (Top Curve) - Radius 37 for perfect center -->
+    <path id="textPathTop" d="M 13,50 A 37,37 0 0,1 87,50" />
+  </defs>
+
+  <style>
+    /* Default (Light Theme) Styles */
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      text-anchor: middle;
+      fill: url(#textGradLight);
+    }
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+      text-anchor: middle;
+      letter-spacing: 1.5px;
+      fill: #475569;
+    }
+    .icon-bg { fill: url(#iconGrad); }
+    .icon-path { fill: #ffffff; }
+    
+    /* Unified Badge Text Style for perfect symmetry */
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 8.5px;
+      font-weight: 800;
+      fill: #ffffff;
+      letter-spacing: 0.5px;
+      dominant-baseline: middle;
+      alignment-baseline: middle;
+    }
+
+    /* Dark Theme Overrides */
+    @media (prefers-color-scheme: dark) {
+      .title { fill: url(#textGradDark); }
+      .subtitle { fill: #94a3b8; }
+    }
+  </style>
+
+  <!-- Center Icon Group (Video Compressor Logo) -->
+  <g transform="translate(350, 40)">
+    <!-- Outer Circle -->
+    <circle cx="50" cy="50" r="48" class="icon-bg" />
+    
+    <!-- Arch Text (Up-To-Date Docker) -->
+    <text class="badge-text">
+      <textPath href="#textPathTop" xlink:href="#textPathTop" startOffset="48.8%" text-anchor="middle">LATEST DOCKER</textPath>
+    </text>
+
+    <!-- U-Shape Text (100% DMCA SAFE) -->
+    <text class="badge-text">
+      <textPath href="#textPathU" xlink:href="#textPathU" startOffset="50%" text-anchor="middle">100% DMCA SAFE</textPath>
+    </text>
+
+    <!-- Camera Icon Group (Shifted slightly up to balance the text) -->
+    <g transform="translate(0, 2)">
+      <!-- Left Compress Arrow -->
+      <path d="M 15 45 L 23 45 L 23 39 L 31 47 L 23 55 L 23 49 L 15 49 Z" class="icon-path" />
+      
+      <!-- Video Camera Body -->
+      <rect x="35" y="37" width="22" height="20" rx="3" class="icon-path" />
+      
+      <!-- Video Camera Lens -->
+      <polygon points="57,42 65,35 65,59 57,52" class="icon-path" />
+      
+      <!-- Right Compress Arrow -->
+      <path d="M 85 45 L 77 45 L 77 39 L 69 47 L 77 55 L 77 49 L 85 49 Z" class="icon-path" />
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="400" y="195" class="title">Subhasish Encoder</text>
+  <text x="400" y="235" class="subtitle">Advanced Telegram Video Compressor</text>
+</svg>
